@@ -3,14 +3,14 @@ $errors = array();
 $username = "";
 $password = "";
     if ($_SERVER["REQUEST_METHOD"] == "POST"){
-        if (strlen($password) < 6) {
+        if (empty($password)) {
             $errors["password"] = "Password is required.";
-        }elseif (empty($password)) {
+        }elseif (strlen($password) < 6) {
             $errors["username"] = "username must be at least 6 characters long.";
         }
-        if (strlen($username) < 6) {
+        if (empty($username)) {
             $errors["username"] = "Username is required.";
-        } elseif (empty($username)) {
+        } elseif (strlen($username) < 6) {
             $errors["username"] = "username must be at least 6 characters long.";
         }
         if (empty($errors)) {
