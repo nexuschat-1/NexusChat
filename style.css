@@ -250,6 +250,8 @@ h1 {
         padding-right: 20px;
     }.card {
         background: linear-gradient(rgba(26,30,41,0.2),rgba(26,30,41,0.6)), url(src_img/p2.jpeg) no-repeat center/cover;
+    }.card-container {
+        transform: translateY(-50px);
     }
     #error_msg{
         width: 300px; 
