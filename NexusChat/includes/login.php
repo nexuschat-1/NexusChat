@@ -9,7 +9,7 @@
             if (empty($password)) {
                 $errors["password"] = "Password is required.";
             }elseif (strlen($password) < 6) {
-                $errors["username"] = "username must be at least 6 characters long.";
+                $errors["password"] = "Password must be at least 6 characters long.";
             }
 
             if (empty($username)) {
