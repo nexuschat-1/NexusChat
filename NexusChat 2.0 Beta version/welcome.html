@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to NexusChat</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }body {
+            background-color: #000000;
+            background-image: url("src_img/bg1.png");
+            background-size: contain; 
+            background-repeat: no-repeat;
+            background-position: center;
+            color: #f8fafc;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }.welcome-container {
+            background-color: #000000;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 420px;
+            text-align: center;
+            border: 1px solid #334155;
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }.brand-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }.logo-space {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }.logo-space svg {
+            width: 24px;
+            height: 24px;
+            fill: #38bdf8;
+        }.NexusChat {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: 0.5px;
+            line-height: 1;
+        }.welcome-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #268cf2;
+            margin-bottom: 8px;
+        }.welcome-text {
+            font-size: 0.95rem;
+            color: #94a3b8;
+            margin-bottom: 30px;
+        }.input-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }.input-group label {
+            display: block;
+            font-size: 0.85rem;
+            color: #cbd5e1;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }.input-group input {
+            width: 100%;
+            padding: 12px 16px;
+            background-color: #0f172a;
+            border: 1px solid #475569;
+            border-radius: 20px;
+            color: #f8fafc;
+            font-size: 0.95rem;
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }.input-group input:focus {
+            border-color: #38bdf8;
+            box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
+        }.notice {
+            font-size: 0.85rem;
+            color: #94a3b8;
+            margin-bottom: 20px;
+            text-align: left;
+            line-height: 1.4;
+        }.submit-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #38bdf8;
+            color: #0f172a;
+            border: none;
+            border-radius: 20px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s, transform 0.1s;
+            margin-top: 5px;
+        }.submit-btn:hover {
+            background-color: #0ea5e9;
+        }.submit-btn:active {
+            transform: scale(0.98);
+        }.footer-copyright {
+            margin-top: 20px;
+            font-size: 0.85rem;
+            color: #64748b;
+            text-align: center;
+        }@media (max-width: 768px) {
+            body {
+                background-image: url("src_img/bg2.png");
+                background-size: contain; 
+            }
+            .welcome-container {
+                width: 75%;
+                max-width: 420px;
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="welcome-container">
+        <div class="brand-header">
+            <div class="logo-space">
+                <div class="NexusChat">NexusChat</div>
+                <img src="src_img/logo.jpeg" alt="NexusChat Logo" style="width: 40px; height: 40px; margin-left: 8px;">
+            </div>
+        </div>
+        <div class="welcome-title">Welcome</div>
+        <p class="welcome-text">Final touch up to connect people with you.</p>
+        <form action="api.php" method="POST">
+            <div class="input-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Please enter your correct name" required minlength="4" maxlength="40">
+            </div>
+            <p class="notice">People will identify and connect with you using your Name.</p>
+            <input type="radio" name="request_type" value="welcome" checked style="display: none;">
+            <button type="submit" class="submit-btn">Let's start Chat</button>
+        </form>
+        <div class="footer-copyright">
+            <p>Developed by NexusChat Team <br>Jithin T J, Sonu Joy and Sangeeth</p> <br>
+            &copy; 2026 NexusChat. All rights reserved.
+        </div>
+    </div>
+
+</body>
+</html>
